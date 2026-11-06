@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CarHut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./hkjhkh.css">
+</head>
+
+<body>
+
+    <header class="hero" id="hero">
+        <nav class="nav container">
+            <a class="logo" href="#"><i class="fa-solid fa-car-side"></i> CarHut</a>
+            <ul class="menu" id="menu">
+                <li><a href="#">Home <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#vehicles">Listings <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Blog <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Pages <i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Sign in</a></li>
+                <li><a href="#" class="btn btn-outline">Submit Listing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" id="themeBtn" aria-label="Rejimni almashtirish"><i
+                        class="fa-solid fa-moon"></i></button>
+                <button class="icon-btn burger" id="burger" aria-label="Menyu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+
+        <div class="hero-body container">
+            <p class="h-price" id="hPrice"></p>
+            <h1 id="hTitle"></h1>
+            <div class="h-specs" id="hSpecs"></div>
+            <a class="btn btn-white" href="#vehicles">Learn More <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <button class="arrow prev" id="prev" aria-label="Oldingi"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="arrow next" id="next" aria-label="Keyingi"><i class="fa-solid fa-chevron-right"></i></button>
+    </header>
+
+    <section class="container section">
+        <div class="sec-head">
+            <h2>Browse by Type</h2><a href="#vehicles" class="view-all">View All <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="grid types">
+            <a href="#vehicles" class="type"><span><i class="fa-solid fa-truck-pickup"></i></span>SUV</a>
+            <a href="#vehicles" class="type"><span><i class="fa-solid fa-car-side"></i></span>Sedan</a>
+            <a href="#vehicles" class="type"><span><i class="fa-solid fa-car"></i></span>Hatchback</a>
+            <a href="#vehicles" class="type"><span><i class="fa-solid fa-car-rear"></i></span>Coupe</a>
+            <a href="#vehicles" class="type"><span><i class="fa-solid fa-leaf"></i></span>Hybrid</a>
+            <a href="#vehicles" class="type"><span><i class="fa-solid fa-van-shuttle"></i></span>Convertible</a>
+        </div>
+    </section>
+
+    <section class="container section" id="vehicles">
+        <div class="sec-head">
+            <h2>Explore All Vehicles</h2><a href="#" class="view-all">View All <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="tabs" id="tabs">
+            <button class="active" data-tab="recent">Recent Cars</button>
+            <button data-tab="featured">Featured Cars</button>
+            <button data-tab="popular">Popular Cars</button>
+        </div>
+        <div class="grid cars" id="carGrid"></div>
+    </section>
+
+    <section class="container section split">
+        <div>
+            <h2>Online, in-person, everywhere</h2>
+            <p>Choose from thousands of vehicles from multiple brands and buy online with Click &amp; Drive, or visit us
+                at one of our dealerships today.</p>
+            <a href="#" class="btn btn-dark">Get Started <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="thumb big"><img src="img/maserati.jpg" alt="Maserati" onerror="this.remove()"></div>
+    </section>
+
+    <section class="container section">
+        <h2>Why Choose Us?</h2>
+        <div class="grid why">
+            <div><i class="fa-solid fa-hand-holding-dollar"></i>
+                <h4>Special Financing Offers</h4>
+                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+            </div>
+            <div><i class="fa-solid fa-shield-halved"></i>
+                <h4>Trusted Car Dealership</h4>
+                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+            </div>
+            <div><i class="fa-solid fa-tags"></i>
+                <h4>Transparent Pricing</h4>
+                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+            </div>
+            <div><i class="fa-solid fa-screwdriver-wrench"></i>
+                <h4>Expert Car Service</h4>
+                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section">
+        <div class="sec-head">
+            <h2>Specials</h2><a href="#" class="view-all">View All <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="grid cars" id="specialGrid"></div>
+    </section>
+
+    <section class="container section">
+        <div class="sec-head">
+            <h2>What our customers say</h2><span class="muted small">Rated 4.7 / 5 based on 28,370 reviews. Showing our
+                4 &amp; 5 star reviews</span>
+        </div>
+        <div class="reviews-wrap">
+            <button class="arrow dark" id="rPrev" aria-label="Oldingi"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="reviews" id="reviews"></div>
+            <button class="arrow dark" id="rNext" aria-label="Keyingi"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section class="container section">
+        <div class="sec-head">
+            <h2>Our Team</h2><a href="#" class="view-all">View All <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="grid team">
+            <div>
+                <div class="thumb tall"><img src="img/team1.jpg" alt="Courtney Henry" onerror="this.remove()"></div>
+                <h4>Courtney Henry</h4>
+                <p>Development Manager</p>
+            </div>
+            <div>
+                <div class="thumb tall"><img src="img/team2.jpg" alt="Jerome Bell" onerror="this.remove()"></div>
+                <h4>Jerome Bell</h4>
+                <p>Software Tester</p>
+            </div>
+            <div>
+                <div class="thumb tall"><img src="img/team3.jpg" alt="Arlene McCoy" onerror="this.remove()"></div>
+                <h4>Arlene McCoy</h4>
+                <p>Software Developer</p>
+            </div>
+            <div>
+                <div class="thumb tall"><img src="img/team4.jpg" alt="Jenny Wilson" onerror="this.remove()"></div>
+                <h4>Jenny Wilson</h4>
+                <p>UI/UX Designer</p>
+            </div>
+        </div>
+        <h2 class="mt">Need Some Inspiration?</h2>
+        <div class="chips">
+            <a href="#">Automatics Cars</a><a href="#">SUVs</a><a href="#">Electrics Cars</a><a href="#">New in
+                Stock</a><a href="#">Petrol</a><a href="#">Diesel</a>
+        </div>
+    </section>
+
+    <section class="container section">
+        <div class="app">
+            <div>
+                <h2>Shop Used Cars, Whether You're On The Lot Or On The Go</h2>
+                <p>Download our app to save cars and create alerts, scan window stickers on our lot for more details,
+                    and even call dibs on a car by holding it for up to 7 days.</p>
+                <div class="stores">
+                    <a href="#" class="store"><i class="fa-brands fa-apple"></i><small>Download on the</small><b>Apple
+                            Store</b></a>
+                    <a href="#" class="store"><i class="fa-brands fa-google-play"></i><small>Get in on</small><b>Google
+                            Play</b></a>
+                </div>
+            </div>
+            <div class="phone"><img src="img/phone.png" alt="App" onerror="this.remove()"></div>
+        </div>
+        <div class="sec-head mt">
+            <h2>Explore Our Premium Brands</h2><a href="#" class="view-all">Show All Brands <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="grid types brands">
+            <a href="#" class="type"><img src="img/audi.png" alt="" onerror="this.remove()">Audi</a>
+            <a href="#" class="type"><img src="img/bmw.png" alt="" onerror="this.remove()">BMW</a>
+            <a href="#" class="type"><img src="img/ford.png" alt="" onerror="this.remove()">Ford</a>
+            <a href="#" class="type"><img src="img/mercedes.png" alt="" onerror="this.remove()">Mercedes Benz</a>
+            <a href="#" class="type"><img src="img/peugeot.png" alt="" onerror="this.remove()">Peugeot</a>
+            <a href="#" class="type"><img src="img/vw.png" alt="" onerror="this.remove()">Volkswagen</a>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>We Make Finding The Right Car Simple</h2>
+            <a href="#" class="btn btn-outline">Find Out More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="join">
+                <div>
+                    <h3>Join CarHut</h3>
+                    <p class="small">Receive pricing updates, shopping tips &amp; more!</p>
+                </div>
+                <form id="nlForm" novalidate>
+                    <input type="email" id="nlEmail" placeholder="Your email address" aria-label="Email">
+                    <button class="btn btn-dark" type="submit">Sign Up</button>
+                </form>
+            </div>
+            <p id="nlMsg" class="small msg"></p>
+            <div class="cols">
+                <div>
+                    <h4>Company</h4><a href="#">About Us</a><a href="#">Blog</a><a href="#">Services</a><a
+                        href="#">FAQs</a><a href="#">Terms</a><a href="#">Contact Us</a>
+                </div>
+                <div>
+                    <h4>Quick Links</h4><a href="#">Get in Touch</a><a href="#">Help center</a><a href="#">Live
+                        chat</a><a href="#">How it works</a>
+                </div>
+                <div>
+                    <h4>Our Brands</h4><a href="#">Toyota</a><a href="#">Porsche</a><a href="#">Audi</a><a
+                        href="#">BMW</a><a href="#">Ford</a><a href="#">Nissan</a><a href="#">Peugeot</a><a
+                        href="#">Volkswagen</a>
+                </div>
+                <div>
+                    <h4>Vehicles Type</h4><a href="#">Sedan</a><a href="#">Hatchback</a><a href="#">SUV</a><a
+                        href="#">Hybrid</a><a href="#">Electric</a><a href="#">Coupe</a><a href="#">Truck</a><a
+                        href="#">Convertible</a>
+                </div>
+                <div>
+                    <h4>Sale Hours</h4>
+                    <p class="small">Monday – Friday: 09:00AM – 09:00PM</p>
+                    <p class="small">Saturday: 09:00AM – 07:00PM</p>
+                    <p class="small">Sunday: Closed</p>
+                    <h4 class="mt-s">Connect With Us</h4>
+                    <div class="social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i
+                                class="fa-brands fa-x-twitter"></i></a><a href="#"><i
+                                class="fa-brands fa-instagram"></i></a><a href="#"><i
+                                class="fa-brands fa-linkedin-in"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="container">
+                <span>© 2025 exemple.com. All rights reserved.</span>
+                <span><a href="#">Terms &amp; Conditions</a> &bull; <a href="#">Privacy Notice</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Tepaga"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="./jnh.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHut – Fast, Simple and Easy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header-inner">
+                <div class="header-left">
+                    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                        <span class="menu-lines"><i></i><i></i></span>
+                        <span class="menu-text">Menu</span>
+                    </button>
+                    <a href="#" class="logo">
+                        <i class="fa-solid fa-car-side"></i> CarHut
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li class="has-dd">
+                            <a href="#">Home <i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="dd">
+                                <li><a href="#">Home 01</a></li>
+                                <li><a href="#">Home 02</a></li>
+                                <li><a href="#">Home 03</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dd">
+                            <a href="#">Listings <i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="dd">
+                                <li><a href="#">Grid view</a></li>
+                                <li><a href="#">List view</a></li>
+                                <li><a href="#">Map view</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dd">
+                            <a href="#">Blog <i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="dd">
+                                <li><a href="#">Blog grid</a></li>
+                                <li><a href="#">Blog details</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dd">
+                            <a href="#">Pages <i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="dd">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Team</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-right">
+                    <a href="#" class="signin"><i class="fa-regular fa-user"></i> <span>Sign in</span></a>
+                    <a href="#" class="btn-outline">Submit Listing</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- SIDE DRAWER (mobil menyu) -->
+        <div class="drawer-bg" id="drawerBg"></div>
+        <aside class="drawer" id="drawer">
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <a href="#" class="logo dark"><i class="fa-solid fa-car-side"></i> CarHut</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Listings</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> Sign in</a></li>
+            </ul>
+            <a href="#" class="btn-primary drawer-btn">Submit Listing</a>
+        </aside>
+
+        <!-- HERO CONTENT -->
+        <div class="container hero-content">
+            <p class="hero-sub">Shop Online. Pickup Today. It's Fast, Simple and Easy. <a href="#">Learn More.</a></p>
+            <h1>Fast, Simple and Easy</h1>
+
+            <div class="tabs" id="tabs">
+                <button class="tab active" data-type="all">All</button>
+                <button class="tab" data-type="new">New</button>
+                <button class="tab" data-type="used">Used</button>
+            </div>
+
+            <form class="search" id="searchForm">
+                <div class="field">
+                    <select id="make" aria-label="Makes">
+                        <option value="">Any Makes</option>
+                        <option value="audi">Audi</option>
+                        <option value="bmw">BMW</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="mercedes">Mercedes-Benz</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select id="model" aria-label="Models">
+                        <option value="">Any Models</option>
+                    </select>
+                </div>
+                <div class="field field-price">
+                    <label for="price">Price:</label>
+                    <select id="price">
+                        <option value="">All Prices</option>
+                        <option value="0-20000">Up to $20,000</option>
+                        <option value="20000-50000">$20,000 – $50,000</option>
+                        <option value="50000-100000">$50,000 – $100,000</option>
+                        <option value="100000-">$100,000+</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                </button>
+            </form>
+            <p class="result-msg" id="resultMsg" role="status"></p>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="categories">
+            <div class="container cat-inner" id="cats">
+                <button class="cat" data-cat="suv"><i class="fa-solid fa-truck-monster"></i> SUV</button>
+                <button class="cat" data-cat="sedan"><i class="fa-solid fa-car-side"></i> Sedan</button>
+                <button class="cat" data-cat="hatchback"><i class="fa-solid fa-car"></i> Hatchback</button>
+                <button class="cat" data-cat="coupe"><i class="fa-solid fa-car-rear"></i> Coupe</button>
+                <button class="cat" data-cat="hybrid"><i class="fa-solid fa-leaf"></i> Hybrid</button>
+                <button class="cat" data-cat="convertible"><i class="fa-solid fa-car-on"></i> Convertible</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= MOST SEARCHED SUV ================= -->
+    <section class="section">
+        <div class="container">
+            <div class="sec-head">
+                <h2>The Most Searched SUV Cars</h2>
+                <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-up arr"></i></a>
+            </div>
+            <div class="car-grid" id="suvGrid"></div>
+        </div>
+    </section>
+
+    <!-- ================= PROMO + BIG ================= -->
+    <section class="section pt0">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo blue">
+                    <div>
+                        <h3>Are You Looking<br>For a Car ?</h3>
+                        <p>We are committed to providing our customers with exceptional service.</p>
+                        <a href="#" class="btn-primary btn-sm">Get Started <i class="fa-solid fa-arrow-up arr"></i></a>
+                    </div>
+                    <i class="fa-solid fa-car-side promo-ico"></i>
+                </div>
+                <div class="promo pink">
+                    <div>
+                        <h3>Do You Want to<br>Sell a Car ?</h3>
+                        <p>We are committed to providing our customers with exceptional service.</p>
+                        <a href="#" class="btn-primary btn-sm btn-dark">Get Started <i
+                                class="fa-solid fa-arrow-up arr"></i></a>
+                    </div>
+                    <i class="fa-solid fa-file-invoice-dollar promo-ico"></i>
+                </div>
+            </div>
+
+            <div class="big-grid">
+                <h2>We're BIG on what<br>matters to you</h2>
+                <div class="feat-list">
+                    <div class="feat">
+                        <i class="fa-solid fa-hand-holding-dollar grad-ico"></i>
+                        <h4>Special Financing Offers</h4>
+                        <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                    </div>
+                    <div class="feat">
+                        <i class="fa-solid fa-gem grad-ico"></i>
+                        <h4>Trusted Car Dealership</h4>
+                        <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                    </div>
+                    <div class="feat">
+                        <i class="fa-solid fa-tags grad-ico"></i>
+                        <h4>Transparent Pricing</h4>
+                                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                    </div>
+                    <div class="feat">
+                        <i class="fa-solid fa-screwdriver-wrench grad-ico"></i>
+                        <h4>Expert Car Service</h4>
+                        <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= POPULAR MAKES ================= -->
+    <section class="section dark-sec">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Popular Makes</h2>
+                <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-up arr"></i></a>
+            </div>
+            <div class="mk-tabs" id="makeTabs">
+                <button class="mk-tab active" data-make="all">In Stock</button>
+                <button class="mk-tab" data-make="audi">Audi</button>
+                <button class="mk-tab" data-make="ford">Ford</button>
+                <button class="mk-tab" data-make="mercedes">Mercedes Benz</button>
+            </div>
+            <div class="slider" id="makeSlider"></div>
+            <div class="slide-nav">
+                <button class="round-btn" id="mkPrev" aria-label="Previous"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button class="round-btn" id="mkNext" aria-label="Next"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>   
+
+    <!-- ================= CUSTOMERS + BRANDS ================= -->
+    <section class="section">
+        <div class="container">
+            <div class="sec-head top">
+                <h2>What Our<br>Customers Say</h2>
+                <div class="arrows">
+                    <button class="sq-btn" id="rvPrev" aria-label="Previous"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <button class="sq-btn" id="rvNext" aria-label="Next"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="testi">
+                <div class="tp">
+                    <strong>Great</strong>
+                    <div class="tp-stars">
+                        <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <small>Based on 5,801 reviews</small>
+                    <div class="tp-logo"><i class="fa-solid fa-star"></i> Trustpilot</div>
+                </div>
+
+                <div class="review" id="review">
+                    <div class="rv-top">
+                        <span class="stars-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                    </div>
+                    <h4 id="rvName"></h4>
+                    <span class="rv-role" id="rvRole"></span>
+                    <p class="rv-text" id="rvText"></p>
+                    <div class="avatars" id="avatars"></div>
+                </div>
+            </div>
+
+            <div class="sec-head brands-head">
+                <h2>Explore Our Premium Brands</h2>
+                <a href="#" class="view-all">Show All Brands <i class="fa-solid fa-arrow-up arr"></i></a>
+            </div>
+            <div class="brand-grid">
+                <a href="#" class="brand"><img src="img/brands/audi.png" alt="Audi"><span>Audi</span></a>
+                <a href="#" class="brand"><img src="img/brands/bmw.png" alt="BMW"><span>BMW</span></a>
+                <a href="#" class="brand"><img src="img/brands/ford.png" alt="Ford"><span>Ford</span></a>
+                <a href="#" class="brand"><img src="img/brands/mercedes.png" alt="Mercedes Benz"><span>Mercedes
+                        Benz</span></a>
+                <a href="#" class="brand"><img src="img/brands/peugeot.png" alt="Peugeot"><span>Peugeot</span></a>
+                <a href="#" class="brand"><img src="img/brands/volkswagen.png"
+                        alt="Volkswagen"><span>Volkswagen</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FINANCE + STATS ================= -->
+    <section class="finance">
+        <div class="container fin-grid">
+            <div class="fin-media">
+                <img src="img/finance.jpg" alt="Car finance">
+                <button class="play-btn" id="videoBtn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="fin-text">
+                <h2>Flexible Finance For Added Shine</h2>
+                <p>AA Car Finance allows you to get a quote without affecting your credit rating. Find a car from any
+                    dealer, and we'll do the rest. With a large panel of 30+ lenders we can help most drivers.</p>
+                <a href="#" class="btn-primary btn-sm">Find Out More <i class="fa-solid fa-arrow-up arr"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-wrap">
+        <div class="container stats" id="stats">
+            <div><b data-count="810">0</b><span>CARS FOR SALE</span></div>
+            <div><b data-count="715">0</b><span>DEALER REVIEWS</span></div>
+            <div><b data-count="96">0</b><span>VISITORS PER DAY</span></div>
+            <div><b data-count="230">0</b><span>VERIFIED DEALERS</span></div>
+        </div>
+    </section>
+
+    <!-- video modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-box">
+            <button class="modal-close" id="videoClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <video id="finVideo" controls preload="none" src="video/finance.mp4"></video>
+        </div>
+    </div>
+
+    <!-- ================= BLOG ================= -->
+    <section class="section">
+        <div class="container">
+            <div class="sec-head">
+                <h2>Latest Blog Posts</h2>
+                <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-up arr"></i></a>
+            </div>
+            <div class="blog-grid">
+                <article class="post">
+                    <a href="#" class="post-img"><img src="img/blog1.jpg" alt="BMW Alpina XB7"><span
+                            class="pill">Sound</span></a>
+                    <div class="post-meta"><span>Admin</span><span>November 23, 2023</span></div>
+                    <h3><a href="#">2024 BMW ALPINA XB7 with exclusive details, extraordinary</a></h3>
+                </article>
+                <article class="post">
+                    <a href="#" class="post-img"><img src="img/blog2.jpg" alt="BMW X6 M50i"><span
+                            class="pill">Accessories</span></a>
+                    <div class="post-meta"><span>Admin</span><span>November 22, 2023</span></div>
+                    <h3><a href="#">BMW X6 M50i is designed to exceed your sportiest.</a></h3>
+                </article>
+                <article class="post">
+                    <a href="#" class="post-img"><img src="img/blog3.jpg" alt="BMW X5 Gold"><span
+                            class="pill">Exterior</span></a>
+                    <div class="post-meta"><span>Admin</span><span>November 22, 2023</span></div>
+                    <h3><a href="#">BMW X5 Gold 2024 Sport Review: Light on Sport</a></h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ASK BAR ================= -->
+    <section class="ask">
+        <div class="container ask-inner">
+            <h3>Have a Questions? Feel Free To Ask...</h3>
+            <a href="tel:+998901234567" class="ask-icon" aria-label="Call us"><i
+                    class="fa-solid fa-mobile-screen"></i></a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="news">
+                <div>
+                    <h3>Join CarHut</h3>
+                    <p>Receive pricing updates, shopping tips &amp; more!</p>
+                </div>
+                <div class="news-wrap">
+                    <form class="news-form" id="newsForm" novalidate>
+                        <input type="email" id="newsEmail" placeholder="Your email address" aria-label="Email">
+                        <button type="submit" class="btn-primary">Sign Up</button>
+                    </form>
+                    <p class="news-msg" id="newsMsg"></p>
+                </div>
+            </div>
+
+            <div class="foot-grid">
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Get in Touch</a></li>
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Live chat</a></li>
+                        <li><a href="#">How it works</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Our Brands</h4>
+                    <ul>
+                        <li><a href="#">Toyota</a></li>
+                        <li><a href="#">Porsche</a></li>
+                        <li><a href="#">Audi</a></li>
+                        <li><a href="#">BMW</a></li>
+                        <li><a href="#">Ford</a></li>
+                        <li><a href="#">Nissan</a></li>
+                        <li><a href="#">Peugeot</a></li>
+                        <li><a href="#">Volkswagen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Vehicles Type</h4>
+                    <ul>
+                        <li><a href="#">Sedan</a></li>
+                        <li><a href="#">Hatchback</a></li>
+                        <li><a href="#">SUV</a></li>
+                        <li><a href="#">Hybrid</a></li>
+                        <li><a href="#">Electric</a></li>
+                        <li><a href="#">Coupe</a></li>
+                        <li><a href="#">Truck</a></li>
+                        <li><a href="#">Convertible</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Our Mobile App</h4>
+                    <a href="#" class="store">
+                        <i class="fa-brands fa-apple"></i>
+                        <span><small>Download on the</small><b>Apple Store</b></span>
+                    </a>
+                    <a href="#" class="store">
+                        <i class="fa-brands fa-google-play"></i>
+                        <span><small>Get in on</small><b>Google Play</b></span>
+                    </a>
+                    <h4 class="connect">Connect With Us</h4>
+                    <div class="social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="foot-bottom">
+                <p>© 2025 exemple.com. All rights reserved.</p>
+                <p><a href="#">Terms &amp; Conditions</a><span class="dot">•</span><a href="#">Privacy Notice</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="./java.js"></script>
+</body>
+
+</html> 

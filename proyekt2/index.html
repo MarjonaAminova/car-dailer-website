@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CarHut – Find Your Dream Car</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo"><i class="fa-solid fa-car-side"></i> CarHut</a>
+            <span class="phone"><i class="fa-solid fa-mobile-screen"></i> +75 123 456 789</span>
+            <nav class="menu" id="menu">
+                <a href="#">Home <i class="fa-solid fa-caret-down"></i></a>
+                 <a href="#cars">Listings <i class="fa-solid fa-caret-down"></i></a>
+                <a href="#blog">Blog <i class="fa-solid fa-caret-down"></i></a>
+                <a href="#">Pages <i class="fa-solid fa-caret-down"></i></a>
+                <a href="#team">About</a><a href="#footer">Contact</a>
+                <a href="#"><i class="fa-regular fa-user"></i> Sign in</a>
+                <a href="#" class="btn btn-outline menu-btn">Submit Listing</a>
+            </nav>
+            <a href="#" class="btn btn-outline desk-btn">Submit Listing</a>
+            <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <p>Find cars for sale and for rent near you</p>
+            <h1>Find Your Dream Car</h1>
+            <form class="search" id="searchForm">
+                <select>
+                    <option>Used Cars</option>
+                    <option>New Cars</option>
+                </select>
+                <select>
+                    <option>Any Makes</option>
+                    <option>BMW</option>
+                    <option>Audi</option>
+                    <option>Ford</option>
+                </select>
+                <select>
+                    <option>Any Models</option>
+                    <option>X5</option>
+                    <option>A6</option>
+                </select>
+                <select>
+                    <option>All Prices</option>
+                    <option>0 – 30,000</option>
+                    <option>30,000+</option>
+                </select>
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <img class="hero-car" src=".//../img/ (2).png" alt="Car">
+        </div>
+    </section>
+
+    <section class="container section">
+        <h2>Browse by Type</h2>
+        <div class="types" id="types"></div>
+        <div class="cta-grid">
+            <div class="cta blue">
+                <div>
+                    <h3>Are You Looking<br>For a Car ?</h3>
+                    <p>We are committed to providing our customers with exceptional service.</p>
+                    <a href="#cars" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-up ar"></i></a>
+                </div>
+                <i class="fa-solid fa-car-side cta-ico" style="color:var(--blue)"></i>
+            </div>
+            <div class="cta pink">
+                <div>
+                    <h3>Do You Want to<br>Sell a Car ?</h3>
+                    <p>We are committed to providing our customers with exceptional service.</p>
+                    <a href="#" class="btn btn-dark">Get Started <i class="fa-solid fa-arrow-up ar"></i></a>
+                </div>
+                <i class="fa-solid fa-file-invoice-dollar cta-ico" style="color:#e84fb0"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="cars">
+        <h2>The Most Searched Cars</h2>
+        <div class="tabs" id="tabs">
+            <button class="active" data-f="all">In Stock</button>
+            <button data-f="Sedan">Sedan</button>
+            <button data-f="SUV">SUV</button>
+            <button data-f="Convertible">Convertible</button>
+        </div>
+        <div class="track" id="track1"></div>
+        <div class="arrows">
+            <button data-t="track1" data-d="-1" aria-label="Prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button data-t="track1" data-d="1" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section class="container section">
+        <div class="why">
+            <h2>Why Choose Us?</h2>
+            <div class="why-grid">
+                <div><i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h4>Special Financing Offers</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                </div>
+                <div><i class="fa-regular fa-gem"></i>
+                    <h4>Trusted Car Dealership</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                </div>
+                <div><i class="fa-solid fa-tags"></i>
+                    <h4>Transparent Pricing</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                </div>
+                <div><i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h4>Expert Car Service</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section">
+        <h2>Latest Cars</h2>
+        <div class="track" id="track2"></div>
+        <div class="arrows">
+            <button data-t="track2" data-d="-1" aria-label="Prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button data-t="track2" data-d="1" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section class="container section">
+        <h3 class="left-title">Need Some Inspiration?</h3>
+        <div class="chips">
+            <a href="#">Automatics Cars</a><a href="#">SUVs</a><a href="#">Electrics Cars</a>
+            <a href="#">New in Stock</a><a href="#">Petrol</a><a href="#">Diesel</a>
+        </div>
+        <div class="reviews">
+            <div class="rev-text">
+                <h2>Who is BoxCar</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                </p>
+            </div>
+            <div class="rev-cards">
+                <div class="rev"><b>Great</b>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div><small>Based on 5,801 reviews</small><strong><i
+                            class="fa-solid fa-star" style="color:#00B67A"></i> Trustpilot</strong>
+                </div>
+                <div class="rev"><b>Great</b>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div><small>Based on 5,801 reviews</small><strong><i
+                            class="fa-brands fa-google" style="color:#4285F4"></i> Google</strong>
+                </div>
+                <div class="rev"><b>Great</b>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div><small>Based on 5,801 reviews</small><strong><i
+                            class="fa-solid fa-dove" style="color:#1a56db"></i> Birdeye</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="team">
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="m c1">
+                <h4>Courtney Henry</h4><small>Development Manager</small><img src="img/team1.jpg" alt="Courtney Henry">
+            </div>
+            <div class="m c2">
+                <h4>Jerome Bell</h4><small>Software Developer</small><img src="img/team2.jpg" alt="Jerome Bell">
+            </div>
+            <div class="m c3">
+                <h4>Jerome Bell</h4><small>Software Tester</small><img src="img/team3.jpg" alt="Jerome Bell">
+            </div>
+            <div class="m c4">
+                <h4>Arlene McCoy</h4><small>Software Developer</small><img src="img/team4.jpg" alt="Arlene McCoy">
+            </div>
+            <div class="m c5">
+                <h4>Jenny Wilson</h4><small>UI/UX Designer</small><img src="img/team5.jpg" alt="Jenny Wilson">
+            </div>
+        </div>
+    </section>
+
+    <section class="container section" id="blog">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog">
+            <article>
+                <div class="thumb"><img src="img/blog1.jpg" alt="Volvo"><span class="tag">Sound</span></div>
+                <small>Admin · November 22, 2023</small>
+                <h4>2024 BMW ALPINA XB7 with exclusive details, extraordinary</h4>
+            </article>
+            <article>
+                <div class="thumb"><img src="img/blog2.jpg" alt="Bentley"><span class="tag">Accessories</span></div>
+                <small>Admin · November 22, 2023</small>
+                <h4>BMW X6 M50i is designed to exceed your sportiest.</h4>
+            </article>
+            <article>
+                <div class="thumb"><img src="img/blog3.jpg" alt="Audi"><span class="tag">Exterior</span></div>
+                <small>Admin · November 22, 2023</small>
+                <h4>BMW X5 Gold 2024 Sport Review: Light on Sport</h4>
+            </article>
+        </div>
+    </section>
+
+    <section class="container section">
+        <div class="brands">
+            <div>
+                <h2 class="left-title">Explore Our Premium Brands</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                </p>
+                <a href="#" class="btn btn-primary">Show All Brands <i class="fa-solid fa-arrow-up ar"></i></a>
+            </div>
+            <img src="img/brands.png" alt="Premium brands">
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="join">
+                <h3>Join CarHut</h3>
+                <p>Receive pricing updates, shopping tips &amp; more!</p>
+                <form id="mailForm"><input type="email" id="email" placeholder="Your email address" required><button
+                        class="btn btn-primary">Sign Up</button></form>
+                <small id="mailMsg"></small>
+            </div>
+            <div class="cols">
+                <div>
+                    <h4>Company</h4><a href="#">About Us</a><a href="#">Blog</a><a href="#">Services</a><a
+                        href="#">FAQs</a><a href="#">Terms</a><a href="#">Contact Us</a>
+                </div>
+                <div>
+                    <h4>Quick Links</h4><a href="#">Get in Touch</a><a href="#">Help center</a><a href="#">Live
+                        chat</a><a href="#">How it works</a>
+                </div>
+                <div>
+                    <h4>Our Brands</h4><a href="#">Toyota</a><a href="#">Porsche</a><a href="#">Audi</a><a
+                        href="#">BMW</a><a href="#">Ford</a><a href="#">Nissan</a><a href="#">Peugeot</a><a
+                        href="#">Volkswagen</a>
+                </div>
+                <div>
+                    <h4>Vehicles Type</h4><a href="#">Sedan</a><a href="#">Hatchback</a><a href="#">SUV</a><a
+                        href="#">Hybrid</a><a href="#">Electric</a><a href="#">Coupe</a><a href="#">Truck</a><a
+                        href="#">Convertible</a>
+                </div>
+                <div>
+                    <h4>Sale Hours</h4>
+                    <p>Monday – Friday: 09:00AM – 09:00 PM</p>
+                    <p>Saturday: 09:00AM – 07:00PM</p>
+                    <p>Sunday: Closed</p>
+                    <h4 class="mt">Connect With Us</h4>
+                    <div class="soc">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy"><span>© 2025 exemple.com. All rights reserved.</span><span>Terms &amp; Conditions •
+                    Privacy Notice</span></div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Up"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="./java.js"></script>
+</body>
+
+</html>
