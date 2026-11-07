@@ -1,254 +1,493 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CarHut</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./hkjhkh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./home3.css">
+    <script src="./home3.js" defer></script>
 </head>
 
 <body>
 
-    <header class="hero" id="hero">
-        <nav class="nav container">
-            <a class="logo" href="#"><i class="fa-solid fa-car-side"></i> CarHut</a>
-            <ul class="menu" id="menu">
-                <li><a href="#">Home <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#vehicles">Listings <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">Blog <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">Pages <i class="fa-solid fa-caret-down"></i></a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#footer">Contact</a></li>
-                <li><a href="#"><i class="fa-regular fa-user"></i> Sign in</a></li>
-                <li><a href="#" class="btn btn-outline">Submit Listing</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="icon-btn" id="themeBtn" aria-label="Rejimni almashtirish"><i
-                        class="fa-solid fa-moon"></i></button>
-                <button class="icon-btn burger" id="burger" aria-label="Menyu"><i class="fa-solid fa-bars"></i></button>
+    <header class="header">
+        <div class="container nav">
+            <a href="#" class="logo"><i class="fa-solid fa-car-side"></i> CarHut</a>
+            <nav class="links" id="links">
+                <a href="#">Home <i class="fa-solid fa-caret-down"></i></a>
+                <a href="#vehicles">Listings <i class="fa-solid fa-caret-down"></i></a>
+                <a href="#">Blog <i class="fa-solid fa-caret-down"></i></a>
+                <a href="#">Pages <i class="fa-solid fa-caret-down"></i></a>
+                <a href="#">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#"><i class="fa-regular fa-user"></i> Sign in</a>
+            </nav>
+            <div class="nav-right">
+                <button class="theme-btn" id="themeBtn" aria-label="Theme"><i class="fa-solid fa-moon"></i></button>
+                <a href="#" class="btn-outline">Submit Listing</a>
+                <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
             </div>
-        </nav>
-
-        <div class="hero-body container">
-            <p class="h-price" id="hPrice"></p>
-            <h1 id="hTitle"></h1>
-            <div class="h-specs" id="hSpecs"></div>
-            <a class="btn btn-white" href="#vehicles">Learn More <i
-                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
-        <button class="arrow prev" id="prev" aria-label="Oldingi"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="arrow next" id="next" aria-label="Keyingi"><i class="fa-solid fa-chevron-right"></i></button>
     </header>
 
-    <section class="container section">
-        <div class="sec-head">
-            <h2>Browse by Type</h2><a href="#vehicles" class="view-all">View All <i
-                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <!-- HERO SLIDER -->
+    <section class="hero" id="hero">
+        <div class="slide active">
+            <img class="slide-img" src="../img/4602ced7c3faa04635c9b6802f935a1619d3f39d.jpg" alt="Mercedes-Benz C Class">
+            <div class="container slide-txt">
+                <h3>$35,000</h3>
+                <h1>Mercedes-Benz, C Class</h1>
+                <p class="meta"><span><i class="fa-solid fa-gas-pump"></i> Petrol</span><span><i
+                            class="fa-solid fa-gauge-high"></i> 100 Miles</span><span><i class="fa-solid fa-gears"></i>
+                        Automatic</span></p>
+                <a href="#" class="btn light">Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
         </div>
-        <div class="grid types">
-            <a href="#vehicles" class="type"><span><i class="fa-solid fa-truck-pickup"></i></span>SUV</a>
-            <a href="#vehicles" class="type"><span><i class="fa-solid fa-car-side"></i></span>Sedan</a>
-            <a href="#vehicles" class="type"><span><i class="fa-solid fa-car"></i></span>Hatchback</a>
-            <a href="#vehicles" class="type"><span><i class="fa-solid fa-car-rear"></i></span>Coupe</a>
-            <a href="#vehicles" class="type"><span><i class="fa-solid fa-leaf"></i></span>Hybrid</a>
-            <a href="#vehicles" class="type"><span><i class="fa-solid fa-van-shuttle"></i></span>Convertible</a>
+        <div class="slide">
+            <img class="slide-img" src="../img/8e701cff7f065e7b6be57650912ab250ab386159.jpg" alt="Audi A6">
+            <div class="container slide-txt">
+                <h3>$58,000</h3>
+                <h1>Audi A6 3.5, New</h1>
+                <p class="meta"><span><i class="fa-solid fa-gas-pump"></i> Petrol</span><span><i
+                            class="fa-solid fa-gauge-high"></i> 100 Miles</span><span><i class="fa-solid fa-gears"></i>
+                        Automatic</span></p>
+                <a href="#" class="btn light">Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
         </div>
+        <div class="slide">
+            <img class="slide-img" src="../img/c36fc004129f2f0dcd04df565fc3a67fc91ce0ca (1).jpg" alt="Ford Explorer">
+            <div class="container slide-txt">
+                <h3>$35,000</h3>
+                <h1>Ford Explorer 2023</h1>
+                <p class="meta"><span><i class="fa-solid fa-gas-pump"></i> Diesel</span><span><i
+                            class="fa-solid fa-gauge-high"></i> 10 Miles</span><span><i class="fa-solid fa-gears"></i>
+                        CVT</span></p>
+                <a href="#" class="btn light">Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <button class="sl-arrow prev" id="slPrev" aria-label="Prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="sl-arrow next" id="slNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
     </section>
 
-    <section class="container section" id="vehicles">
-        <div class="sec-head">
-            <h2>Explore All Vehicles</h2><a href="#" class="view-all">View All <i
-                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-        <div class="tabs" id="tabs">
-            <button class="active" data-tab="recent">Recent Cars</button>
-            <button data-tab="featured">Featured Cars</button>
-            <button data-tab="popular">Popular Cars</button>
-        </div>
-        <div class="grid cars" id="carGrid"></div>
-    </section>
-
-    <section class="container section split">
-        <div>
-            <h2>Online, in-person, everywhere</h2>
-            <p>Choose from thousands of vehicles from multiple brands and buy online with Click &amp; Drive, or visit us
-                at one of our dealerships today.</p>
-            <a href="#" class="btn btn-dark">Get Started <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-        <div class="thumb big"><img src="img/maserati.jpg" alt="Maserati" onerror="this.remove()"></div>
-    </section>
-
-    <section class="container section">
-        <h2>Why Choose Us?</h2>
-        <div class="grid why">
-            <div><i class="fa-solid fa-hand-holding-dollar"></i>
-                <h4>Special Financing Offers</h4>
-                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+    <!-- BROWSE BY TYPE -->
+    <section class="section">
+        <div class="container">
+            <div class="head">
+                <h2>Browse by Type</h2><a href="#" class="viewall">View All <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
-            <div><i class="fa-solid fa-shield-halved"></i>
-                <h4>Trusted Car Dealership</h4>
-                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
-            </div>
-            <div><i class="fa-solid fa-tags"></i>
-                <h4>Transparent Pricing</h4>
-                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
-            </div>
-            <div><i class="fa-solid fa-screwdriver-wrench"></i>
-                <h4>Expert Car Service</h4>
-                <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+            <div class="types">
+                <a href="#"><span><i class="fa-solid fa-truck-monster"></i></span>SUV</a>
+                <a href="#"><span><i class="fa-solid fa-car-side"></i></span>Sedan</a>
+                <a href="#"><span><i class="fa-solid fa-car-rear"></i></span>Hatchback</a>
+                <a href="#"><span><i class="fa-solid fa-car"></i></span>Coupe</a>
+                <a href="#"><span><i class="fa-solid fa-leaf"></i></span>Hybrid</a>
+                <a href="#"><span><i class="fa-solid fa-car-on"></i></span>Convertible</a>
             </div>
         </div>
     </section>
 
-    <section class="container section">
-        <div class="sec-head">
-            <h2>Specials</h2><a href="#" class="view-all">View All <i
-                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <!-- EXPLORE ALL VEHICLES -->
+    <section class="section gray" id="vehicles">
+        <div class="container">
+            <div class="head">
+                <h2>Explore All Vehicles</h2><a href="#" class="viewall">View All <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="tabs" id="vTabs"><button class="active" data-tab="recent">Recent Cars</button><button
+                    data-tab="featured">Featured Cars</button><button data-tab="popular">Popular Cars</button></div>
+            <div class="grid" id="vGrid">
+
+                <article class="card" data-tabs="recent featured">
+                    <div class="pic"><span class="badge">Great Price</span><button class="bm"><i
+                                class="fa-regular fa-bookmark"></i></button><img src="../img/b715e80ecd27bafb01ffb424d8802f899a95b2ad.jpg"
+                            alt="Toyota Camry New"></div>
+                    <div class="body">
+                        <h4>Toyota Camry New</h4>
+                        <p class="sub">3.5 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>20 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Automatic</span></div>
+                        <div class="price"><b>$40,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card" data-tabs="recent popular">
+                    <div class="pic"><button class="bm"><i class="fa-regular fa-bookmark"></i></button><img
+                            src="../img/fcd87c97a6e47040f3e03e844a51decea6a0c19a (1).jpg" alt="T-Cross 2023"></div>
+                    <div class="body">
+                        <h4>T-Cross – 2023</h4>
+                        <p class="sub">4.0 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>15 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>CVT</span></div>
+                        <div class="price"><b>$15,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card" data-tabs="recent featured">
+                    <div class="pic"><button class="bm"><i class="fa-regular fa-bookmark"></i></button><img
+                            src="../img/b715e80ecd27bafb01ffb424d8802f899a95b2ad.jpg" alt="C-Class 2023"></div>
+                    <div class="body">
+                        <h4>C-Class – 2023</h4>
+                        <p class="sub">4.0 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>50 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Automatic</span></div>
+                        <div class="price"><b>$150,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card" data-tabs="recent popular">
+                    <div class="pic"><span class="badge">Great Price</span><button class="bm"><i
+                                class="fa-regular fa-bookmark"></i></button><img src="../img/fcd87c97a6e47040f3e03e844a51decea6a0c19a (1).jpg"
+                            alt="Ford Transit 2021"></div>
+                    <div class="body">
+                        <h4>Ford Transit – 2021</h4>
+                        <p class="sub">4.0 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>2500 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Diesel</span><span><i
+                                    class="fa-solid fa-gears"></i>Manual</span></div>
+                        <div class="price"><b>$22,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card" data-tabs="recent featured">
+                    <div class="pic"><span class="badge low">Low Mileage</span><button class="bm"><i
+                                class="fa-regular fa-bookmark"></i></button><img src="../img/b715e80ecd27bafb01ffb424d8802f899a95b2ad.jpg" alt="New GLC 2023">
+                    </div>
+                    <div class="body">
+                        <h4>New GLC – 2023</h4>
+                        <p class="sub">4.0 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>50 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Automatic</span></div>
+                        <div class="price"><b>$95,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card" data-tabs="recent popular">
+                    <div class="pic"><button class="bm"><i class="fa-regular fa-bookmark"></i></button><img
+                            src="../img/fcd87c97a6e47040f3e03e844a51decea6a0c19a (1).jpg" alt="Audi A6 3.5 New"></div>
+                    <div class="body">
+                        <h4>Audi A6 3.5 – New</h4>
+                        <p class="sub">3.5 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>100 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Automatic</span></div>
+                        <div class="price"><b>$58,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card" data-tabs="recent featured">
+                    <div class="pic"><button class="bm"><i class="fa-regular fa-bookmark"></i></button><img
+                            src="../img/b715e80ecd27bafb01ffb424d8802f899a95b2ad.jpg" alt="Corolla Altis 2023"></div>
+                    <div class="body">
+                        <h4>Corolla Altis – 2023</h4>
+                        <p class="sub">3.5 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>15000 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>CVT</span></div>
+                        <div class="price"><b>$45,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card" data-tabs="recent popular">
+                    <div class="pic"><span class="badge">Great Price</span><button class="bm"><i
+                                class="fa-regular fa-bookmark"></i></button><img src="../img/fcd87c97a6e47040f3e03e844a51decea6a0c19a (1).jpg"
+                            alt="Ford Explorer 2023"></div>
+                    <div class="body">
+                        <h4>Ford Explorer 2023</h4>
+                        <p class="sub">3.5 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>10 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Diesel</span><span><i
+                                    class="fa-solid fa-gears"></i>CVT</span></div>
+                        <div class="price"><b>$35,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+
+            </div>
         </div>
-        <div class="grid cars" id="specialGrid"></div>
     </section>
 
-    <section class="container section">
-        <div class="sec-head">
-            <h2>What our customers say</h2><span class="muted small">Rated 4.7 / 5 based on 28,370 reviews. Showing our
-                4 &amp; 5 star reviews</span>
-        </div>
-        <div class="reviews-wrap">
-            <button class="arrow dark" id="rPrev" aria-label="Oldingi"><i class="fa-solid fa-chevron-left"></i></button>
-            <div class="reviews" id="reviews"></div>
-            <button class="arrow dark" id="rNext" aria-label="Keyingi"><i
-                    class="fa-solid fa-chevron-right"></i></button>
-        </div>
-    </section>
-
-    <section class="container section">
-        <div class="sec-head">
-            <h2>Our Team</h2><a href="#" class="view-all">View All <i
-                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-        <div class="grid team">
-            <div>
-                <div class="thumb tall"><img src="img/team1.jpg" alt="Courtney Henry" onerror="this.remove()"></div>
-                <h4>Courtney Henry</h4>
-                <p>Development Manager</p>
+    <!-- ONLINE + WHY CHOOSE US -->
+    <section class="section">
+        <div class="container">
+            <div class="online">
+                <div>
+                    <h2>Online, in-person,<br>everywhere</h2>
+                    <p>Choose from thousands of vehicles from multiple brands and buy online with Click &amp; Drive, or
+                        visit us at one of our dealerships today.</p>
+                    <a href="#" class="btn dark">Get Started <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <img class="online-img" src="../img/aa0c09aaa9c2ae00c370dfc4f57fef810bca09f7.jpg" alt="White sports car">
             </div>
-            <div>
-                <div class="thumb tall"><img src="img/team2.jpg" alt="Jerome Bell" onerror="this.remove()"></div>
-                <h4>Jerome Bell</h4>
-                <p>Software Tester</p>
-            </div>
-            <div>
-                <div class="thumb tall"><img src="img/team3.jpg" alt="Arlene McCoy" onerror="this.remove()"></div>
-                <h4>Arlene McCoy</h4>
-                <p>Software Developer</p>
-            </div>
-            <div>
-                <div class="thumb tall"><img src="img/team4.jpg" alt="Jenny Wilson" onerror="this.remove()"></div>
-                <h4>Jenny Wilson</h4>
-                <p>UI/UX Designer</p>
-            </div>
-        </div>
-        <h2 class="mt">Need Some Inspiration?</h2>
-        <div class="chips">
-            <a href="#">Automatics Cars</a><a href="#">SUVs</a><a href="#">Electrics Cars</a><a href="#">New in
-                Stock</a><a href="#">Petrol</a><a href="#">Diesel</a>
-        </div>
-    </section>
-
-    <section class="container section">
-        <div class="app">
-            <div>
-                <h2>Shop Used Cars, Whether You're On The Lot Or On The Go</h2>
-                <p>Download our app to save cars and create alerts, scan window stickers on our lot for more details,
-                    and even call dibs on a car by holding it for up to 7 days.</p>
-                <div class="stores">
-                    <a href="#" class="store"><i class="fa-brands fa-apple"></i><small>Download on the</small><b>Apple
-                            Store</b></a>
-                    <a href="#" class="store"><i class="fa-brands fa-google-play"></i><small>Get in on</small><b>Google
-                            Play</b></a>
+            <h2 class="why-h">Why Choose Us?</h2>
+            <div class="feats">
+                <div><i class="fa-solid fa-tv"></i>
+                    <h4>Special Financing Offers</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                </div>
+                <div><i class="fa-regular fa-gem"></i>
+                    <h4>Trusted Car Dealership</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                </div>
+                <div><i class="fa-solid fa-tags"></i>
+                    <h4>Transparent Pricing</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
+                </div>
+                <div><i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h4>Expert Car Service</h4>
+                    <p>Our stress-free finance department that can find financial solutions to save you money.</p>
                 </div>
             </div>
-            <div class="phone"><img src="img/phone.png" alt="App" onerror="this.remove()"></div>
         </div>
-        <div class="sec-head mt">
-            <h2>Explore Our Premium Brands</h2><a href="#" class="view-all">Show All Brands <i
+    </section>
+
+    <!-- SPECIALS -->
+    <section class="section" style="padding-top:0">
+        <div class="container">
+            <div class="head">
+                <h2>Specials</h2><a href="#" class="viewall">View All <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="slider" id="spSlider">
+
+                <article class="card">
+                    <div class="pic"><button class="bm"><i class="fa-regular fa-bookmark"></i></button><img
+                            src="../img/5508d78a6dd0ea1cbd2608911bef270e57bacf6e (1).jpg" alt="C-Class 2023"></div>
+                    <div class="body">
+                        <h4>C-Class – 2023</h4>
+                        <p class="sub">4.0 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>50 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Automatic</span></div>
+                        <div class="price"><b>$150,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="pic"><span class="badge">Great Price</span><button class="bm"><i
+                                class="fa-regular fa-bookmark"></i></button><img src="../img/60e918b1d49e16d94a7d331d0a22d92bbd66a21e.jpg"
+                            alt="Ford Transit 2021"></div>
+                    <div class="body">
+                        <h4>Ford Transit – 2021</h4>
+                        <p class="sub">4.0 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>2500 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Manual</span></div>
+                        <div class="price"><b>$22,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="pic"><span class="badge low">Low Mileage</span><button class="bm"><i
+                                class="fa-regular fa-bookmark"></i></button><img src="../img/5508d78a6dd0ea1cbd2608911bef270e57bacf6e (1).jpg" alt="New GLC 2023">
+                    </div>
+                    <div class="body">
+                        <h4>New GLC – 2023</h4>
+                        <p class="sub">4.0 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>50 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Automatic</span></div>
+                        <div class="price"><b>$95,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="pic"><button class="bm"><i class="fa-regular fa-bookmark"></i></button><img
+                            src="../img/60e918b1d49e16d94a7d331d0a22d92bbd66a21e.jpg" alt="Audi A6 3.5 New"></div>
+                    <div class="body">
+                        <h4>Audi A6 3.5 – New</h4>
+                        <p class="sub">3.5 D5 PowerPulse Momentum 5dr AWD Geartronic</p>
+                        <div class="spec"><span><i class="fa-solid fa-gauge-high"></i>100 Miles</span><span><i
+                                    class="fa-solid fa-gas-pump"></i>Petrol</span><span><i
+                                    class="fa-solid fa-gears"></i>Automatic</span></div>
+                        <div class="price"><b>$58,000</b><a href="#">View Details <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                    </div>
+                </article>
+
+            </div>
+            <div class="arrows"><button id="prevS" aria-label="Prev"><i
+                        class="fa-solid fa-chevron-left"></i></button><button id="nextS" aria-label="Next"><i
+                        class="fa-solid fa-chevron-right"></i></button></div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section gray">
+        <div class="container">
+            <div class="head">
+                <h2>What our customers say</h2>
+                <p class="rated">Rated 4.7 / 5 based on 28,370 reviews Showing our 4 &amp; 5 star reviews</p>
+            </div>
+            <div class="rev-wrap">
+                <button class="rv-arrow" id="prevR" aria-label="Prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="slider rev" id="rvSlider">
+                    <article class="rcard">
+                        <div class="rtop"><span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span
+                                class="ver"><i class="fa-solid fa-circle-check"></i> Verified</span></div>
+                        <h4>Sales process was simple and easy</h4>
+                        <p>Sales process was simple and easy. Maximillion was friendly and I didn't feel pressured.</p>
+                        <b>Ali Tufan</b>
+                    </article>
+                    <article class="rcard">
+                        <div class="rtop"><span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star off"></i></span><span
+                                class="ver"><i class="fa-solid fa-circle-check"></i> Verified</span></div>
+                        <h4>Good job for project</h4>
+                        <p>Sales process was simple and easy. Maximillion was friendly and I didn't feel pressured.</p>
+                        <b>John Doe</b>
+                    </article>
+                    <article class="rcard">
+                        <div class="rtop"><span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star off"></i><i
+                                    class="fa-solid fa-star off"></i><i class="fa-solid fa-star off"></i></span><span
+                                class="ver"><i class="fa-solid fa-circle-check"></i> Verified</span></div>
+                        <h4>Sales process was simple and easy</h4>
+                        <p>At Voiture what matters to us is making your car search and buying experience easy.</p>
+                        <b>Brooklyn Simmons</b>
+                    </article>
+                    <article class="rcard">
+                        <div class="rtop"><span class="stars"><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span
+                                class="ver"><i class="fa-solid fa-circle-check"></i> Verified</span></div>
+                        <h4>Good job for project</h4>
+                        <p>Sales process was simple and easy. Maximillion was friendly and I didn't feel pressured.</p>
+                        <b>Augusta Silva</b>
+                    </article>
+                </div>
+                <button class="rv-arrow" id="nextR" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM + INSPIRATION -->
+    <section class="section">
+        <div class="container">
+            <div class="head">
+                <h2>Our Team</h2><a href="#" class="viewall">View All <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="team">
+                <div class="member"><img src="../img/609f0edbc6213a82bd960820d6e96a1794013456 (10).jpg" alt="Courtney Henry"><b>Courtney
+                        Henry</b><small>Development Manager</small></div>
+                <div class="member"><img src="../img/82446cb8f10e4d1cd36a06ce5e4736b71bcad805.jpg" alt="Jerome Bell"><b>Jerome Bell</b><small>Software
+                        Tester</small></div>
+                <div class="member"><img src="../img/e92dde11a41f4d3df285abc8efcc877875ba40fc — копия.jpg" alt="Arlene McCoy"><b>Arlene McCoy</b><small>Software
+                        Developer</small></div>
+                <div class="member"><img src="../img/5bbcd7f1daf9cd4f199672ed3cab5c6198e660f6 (1).jpg" alt="Jenny Wilson"><b>Jenny Wilson</b><small>UI/UX
+                        Designer</small></div>
+            </div>
+            <h2 class="insp">Need Some Inspiration?</h2>
+            <div class="chips"><a href="#">Automatics Cars</a><a href="#">SUVs</a><a href="#">Electrics Cars</a><a
+                    href="#">New in Stock</a><a href="#">Petrol</a><a href="#">Diesel</a></div>
+        </div>
+    </section>
+
+    <!-- APP + BRANDS -->
+    <section class="section" style="padding-top:0">
+        <div class="container">
+            <div class="app">
+                <div class="app-txt">
+                    <h2>Shop Used Cars, Whether You're On The Lot Or On The Go</h2>
+                    <p>Download our app to save cars and create alerts, scan window stickers on our lot for more
+                        details, and even call dibs on a car by holding it for up to 7 days.</p>
+                    <div class="stores">
+                        <a href="#" class="store"><i class="fa-brands fa-apple"></i><span><small>Download on
+                                    the</small>Apple Store</span></a>
+                        <a href="#" class="store"><i class="fa-brands fa-google-play"></i><span><small>Get in
+                                    on</small>Google Play</span></a>
+                    </div>
+                </div>
+                <img class="app-phone" src="../img/3d28bfe586c1e7c46961e1a7cc9e7b021034332b.jpg" alt="Mobile app">
+            </div>
+
+            <div class="head brands-h">
+                <h2>Explore Our Premium Brands</h2><a href="#" class="viewall">Show All Brands <i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="brands">
+            <a href="#" class="brand"><img src="../img/77867001930a7f83335c2e20a7c2b2aa202f7101.jpg" alt="Audi"><span>Audi</span></a>
+                <a href="#" class="brand"><img src="../img/bf4f2015de9eeefd5cce4a73d57992f2bc84735e.jpg" alt="BMW"><span>BMW</span></a>
+                <a href="#" class="brand"><img src="../img/057dafcdb2ebc38c7a15af8c45656bcf31dd651e (1).jpg" alt="Ford"><span>Ford</span></a>
+                <a href="#" class="brand"><img src="../img/9169ee755e42830825dc7da7172ff0d9f468751c (3).jpg" alt="Mercedes Benz"><span>Mercedes
+                        Benz</span></a>
+                <a href="#" class="brand"><img src="../img/91bd4e40aa54a3bec35a6c90c8b6f0c9d7d17dfe (1).jpg" alt="Peugeot"><span>Peugeot</span></a>
+                <a href="#" class="brand"><img src="../img/05a6e90afa4ddde39f89666584b6d75125072301 (1).jpg"
+                        alt="Volkswagen"><span>Volkswagen</span></a>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="banner">
+        <img src="../img/a3069c2f620778ba7b2ce5133452d1f5731a7d9a.jpg" alt="Woman with phone next to a car">
+        <div class="container">
+            <h2>We Make Finding The<br>Right Car Simple</h2><a href="#" class="btn ghost">Find Out More <i
                     class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
-        <div class="grid types brands">
-            <a href="#" class="type"><img src="img/audi.png" alt="" onerror="this.remove()">Audi</a>
-            <a href="#" class="type"><img src="img/bmw.png" alt="" onerror="this.remove()">BMW</a>
-            <a href="#" class="type"><img src="img/ford.png" alt="" onerror="this.remove()">Ford</a>
-            <a href="#" class="type"><img src="img/mercedes.png" alt="" onerror="this.remove()">Mercedes Benz</a>
-            <a href="#" class="type"><img src="img/peugeot.png" alt="" onerror="this.remove()">Peugeot</a>
-            <a href="#" class="type"><img src="img/vw.png" alt="" onerror="this.remove()">Volkswagen</a>
-        </div>
     </section>
 
-    <section class="cta">
-        <div class="container">
-            <h2>We Make Finding The Right Car Simple</h2>
-            <a href="#" class="btn btn-outline">Find Out More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </section>
-
-    <footer id="footer">
+    <!-- NEWSLETTER + FOOTER -->
+    <footer id="contact">
         <div class="container">
             <div class="join">
                 <div>
                     <h3>Join CarHut</h3>
-                    <p class="small">Receive pricing updates, shopping tips &amp; more!</p>
+                    <p>Receive pricing updates, shopping tips &amp; more!</p>
                 </div>
-                <form id="nlForm" novalidate>
-                    <input type="email" id="nlEmail" placeholder="Your email address" aria-label="Email">
-                    <button class="btn btn-dark" type="submit">Sign Up</button>
-                </form>
+                <form class="mail" onsubmit="return false"><input type="email" placeholder="Your email address"><button
+                        class="btn dark">Sign Up</button></form>
             </div>
-            <p id="nlMsg" class="small msg"></p>
-            <div class="cols">
+            <div class="fcols">
                 <div>
-                    <h4>Company</h4><a href="#">About Us</a><a href="#">Blog</a><a href="#">Services</a><a
+                    <h5>Company</h5><a href="#">About Us</a><a href="#">Blog</a><a href="#">Services</a><a
                         href="#">FAQs</a><a href="#">Terms</a><a href="#">Contact Us</a>
                 </div>
                 <div>
-                    <h4>Quick Links</h4><a href="#">Get in Touch</a><a href="#">Help center</a><a href="#">Live
+                    <h5>Quick Links</h5><a href="#">Get in Touch</a><a href="#">Help center</a><a href="#">Live
                         chat</a><a href="#">How it works</a>
                 </div>
                 <div>
-                    <h4>Our Brands</h4><a href="#">Toyota</a><a href="#">Porsche</a><a href="#">Audi</a><a
+                    <h5>Our Brands</h5><a href="#">Toyota</a><a href="#">Porsche</a><a href="#">Audi</a><a
                         href="#">BMW</a><a href="#">Ford</a><a href="#">Nissan</a><a href="#">Peugeot</a><a
                         href="#">Volkswagen</a>
                 </div>
                 <div>
-                    <h4>Vehicles Type</h4><a href="#">Sedan</a><a href="#">Hatchback</a><a href="#">SUV</a><a
+                    <h5>Vehicles Type</h5><a href="#">Sedan</a><a href="#">Hatchback</a><a href="#">SUV</a><a
                         href="#">Hybrid</a><a href="#">Electric</a><a href="#">Coupe</a><a href="#">Truck</a><a
                         href="#">Convertible</a>
                 </div>
                 <div>
-                    <h4>Sale Hours</h4>
-                    <p class="small">Monday – Friday: 09:00AM – 09:00PM</p>
-                    <p class="small">Saturday: 09:00AM – 07:00PM</p>
-                    <p class="small">Sunday: Closed</p>
-                    <h4 class="mt-s">Connect With Us</h4>
+                    <h5>Sale Hours</h5>
+                    <p class="hrs">Monday – Friday: 09:00AM – 09:00PM</p>
+                    <p class="hrs">Saturday: 09:00AM – 07:00PM</p>
+                    <p class="hrs">Sunday: Closed</p>
+                    <h5 class="mt">Connect With Us</h5>
                     <div class="social"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i
-                                class="fa-brands fa-x-twitter"></i></a><a href="#"><i
+                                class="fa-brands fa-twitter"></i></a><a href="#"><i
                                 class="fa-brands fa-instagram"></i></a><a href="#"><i
                                 class="fa-brands fa-linkedin-in"></i></a></div>
                 </div>
             </div>
-        </div>
-        <div class="copy">
-            <div class="container">
-                <span>© 2025 exemple.com. All rights reserved.</span>
-                <span><a href="#">Terms &amp; Conditions</a> &bull; <a href="#">Privacy Notice</a></span>
-            </div>
+            <div class="copy"><span>© 2025 exemple.com. All rights reserved.</span><span><a href="#">Terms &amp;
+                        Conditions</a> &nbsp;•&nbsp; <a href="#">Privacy Notice</a></span></div>
         </div>
     </footer>
 
-    <button class="to-top" id="toTop" aria-label="Tepaga"><i class="fa-solid fa-arrow-up"></i></button>
-    <script src="./jnh.js"></script>
+    <button class="totop" id="toTop" aria-label="Top"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="lightbox" id="lightbox"><button class="lb-close"><i class="fa-solid fa-xmark"></i></button><img src=""
+            alt=""></div>
 </body>
 
 </html>
